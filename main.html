@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuickDash - Lightning Fast Delivery</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:#f8f9fc;
+    color:#333;
+}
+
+header {
+    background: linear-gradient(135deg,#00c853,#009624);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+header h1 { font-size:3rem; font-weight:700; }
+header p { margin-top:15px; font-size:1.2rem; opacity:0.9; }
+
+.container { max-width:1100px; margin:auto; padding:60px 20px; }
+
+.about { text-align:center; margin-bottom:60px; }
+.about h2 { font-size:2rem; margin-bottom:20px; color:#00a152; }
+.about p { max-width:800px; margin:auto; line-height:1.7; font-size:1.05rem; color:#555; }
+
+.features {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.feature-card {
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.feature-card:hover { transform:translateY(-5px); }
+.feature-card h3 { margin-bottom:15px; color:#00a152; }
+.feature-card p { font-size:0.95rem; color:#666; }
+
+.download-section {
+    text-align:center;
+    background:white;
+    padding:50px 20px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.download-section h2 { margin-bottom:15px; color:#00a152; }
+.download-section p { margin-bottom:25px; color:#555; }
+
+.download-btn {
+    display:inline-block;
+    padding:18px 50px;
+    background:linear-gradient(135deg,#00c853,#009624);
+    color:white;
+    font-size:1.2rem;
+    font-weight:600;
+    text-decoration:none;
+    border-radius:50px;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,200,83,0.3);
+}
+
+.download-btn:hover { transform:translateY(-3px); }
+
+.version-info {
+    margin-top:15px;
+    font-size:0.9rem;
+    color:#888;
+}
+
+footer {
+    margin-top:60px;
+    padding:30px;
+    text-align:center;
+    font-size:0.9rem;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>QuickDash</h1>
+    <p>Groceries • Food • Essentials • Electronics — Delivered in Minutes</p>
+</header>
+
+<div class="container">
+
+    <section class="about">
+        <h2>About QuickDash</h2>
+        <p>
+        QuickDash is a modern quick-commerce platform designed to deliver groceries, 
+        fresh food, daily essentials, and small electronic items directly to your doorstep 
+        in minutes. Our mission is to make everyday shopping faster, smarter, and more convenient.
+        With reliable delivery partners and real-time order tracking, we ensure speed without compromise.
+        </p>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Ultra Fast Delivery</h3>
+            <p>Get your essential items delivered within minutes with our optimized delivery network.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Wide Product Range</h3>
+            <p>From groceries and fresh food to daily essentials and electronics — everything in one place.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Real-Time Tracking</h3>
+            <p>Track your order live and know exactly when your delivery will arrive.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Safe & Reliable</h3>
+            <p>Secure payments, verified partners, and quality assurance on every order.</p>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <h2>Download QuickDash Now</h2>
+        <p>Click the button below to download the APK and experience lightning-fast delivery today.</p>
+
+        <a href="#" id="download-link" class="download-btn" target="_blank">
+            Download APK
+        </a>
+
+        <p class="version-info" id="version-text">Loading version info...</p>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 QuickDash. All Rights Reserved.
+</footer>
+
+<script>
+    
+    const jsonUrl = 'version.json'; 
+
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            document.getElementById('version-text').innerText = `Version ${data.versionName} | Version Code ${data.versionCode}`;
+            document.getElementById('download-link').href = data.apkUrl;
+        })
+        .catch(error => {
+            console.error('Error loading version data:', error);
+            document.getElementById('version-text').innerText = 'Version info currently unavailable';
+        });
+</script>
+
+</body>
+</html>
