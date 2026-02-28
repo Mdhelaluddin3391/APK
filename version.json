@@ -1,6 +1,6 @@
 {
-  "versionCode": 15, 
-  "versionName": "2.4.7",
-  "releaseNotes": "- improved serached results \n- Bugs fixed",
+  "versionCode": 16, 
+  "versionName": "2.4.8",
+  "releaseNotes": "- Smart Address Auto-Fill (Map to Form Integration) \n- Advanced Location Extraction (OpenStreetMap Upgrade)\n- Partial Item Cancellation Indicator",
   "apkUrl": "https://github.com/Mdhelaluddin3391/APK/releases/latest/download/quickdash.apk"
 }
