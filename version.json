@@ -1,6 +1,16 @@
 {
-  "versionCode": 18, 
-  "versionName": "2.5.9",
-  "releaseNotes": "- Smart Address Auto-Fill (Map to Form Integration) \n- Advanced Location Extraction (OpenStreetMap Upgrade)\n- Partial Item Cancellation Indicator",
+  "versionCode": 19, 
+  "versionName": "2.6.9",
+  "releaseNotes": "
+✨ What's New
+
+- Smart Address Auto-Fill
+- Advanced Location Extraction Upgrade
+- Accurate ETA Time Display
+- Improved Search Performance
+- Loading Issues Fixed
+- UI Enhancements & Better Experience
+- Bug Fixes & Performance Improvements
+"
   "apkUrl": "https://github.com/Mdhelaluddin3391/APK/releases/latest/download/quickdash.apk"
 }
