@@ -1,6 +1,6 @@
 {
-  "versionCode": 21, 
-  "versionName": "2.8.0",
+  "versionCode": 22, 
+  "versionName": "2.8.1",
   "releaseNotes": "What's New\n- Smart Address Auto-Fill\n- Advanced Location Extraction Upgrade\n- Accurate ETA Time Display\n- Improved Search Performance\n- Loading Issues Fixed\n- UI Enhancements & Better Experience\n- Bug Fixes & Performance Improvements",
   "apkUrl": "https://github.com/Mdhelaluddin3391/APK/releases/latest/download/quickdash.apk" 
 }
